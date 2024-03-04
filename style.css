@@ -1,0 +1,231 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fafafa;
+  font-family: "Nunito Sans", sans-serif;
+}
+/* navbar start */
+.nav {
+  padding: 20px 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+.nav .container,
+.header .container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.header .container {
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.dark-mode {
+  cursor: pointer;
+}
+.nav .container .mode {
+  display: inline-flex;
+  width: 200px;
+  align-items: center;
+  justify-content: end;
+}
+.nav .container .mode img {
+  margin-right: 5px;
+}
+/* navbar end */
+
+/* header start */
+.header {
+  max-width: 100%;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 25vw;
+  padding: 19px 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+.input-box input {
+  border: none;
+  outline: none;
+}
+.input-box input::placeholder {
+  color: #848484;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.filter {
+  position: relative;
+  max-width: 200px;
+}
+.select {
+  width: 200px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  padding: 20px 30px;
+}
+.filter p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.option {
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  background: #fff;
+  padding: 16px 24px;
+  margin-top: 10px;
+  display: none;
+  z-index: 100;
+}
+.option_show {
+  display: flex;
+}
+.section {
+  max-width: 100%;
+  margin-top: 40px;
+}
+.section .container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 254px));
+  grid-auto-rows: 340px;
+  gap: 75px 10px;
+  justify-content: space-between;
+}
+.country-card {
+  background-color: #fff;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  max-width: 264px;
+  width: 100%;
+}
+.country-card img {
+  width: 100%;
+  height: 140px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.country-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 24px;
+}
+.country-card p {
+  margin: 8px 24px;
+  font-size: 14px;
+}
+
+@media (max-width: 375px) {
+  .nav {
+    padding: 14px 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .nav .container {
+    max-width: 100%;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .nav h2 {
+    font-size: 14px;
+  }
+  .nav .container .mode {
+    font-size: 12px;
+    display: inline-flex;
+    width: 100px;
+  }
+  .mode img {
+    width: 16px;
+  }
+  .header {
+    padding: 16px;
+  }
+  .header .container {
+    width: 100%;
+
+    max-width: 374px;
+    flex-wrap: wrap;
+  }
+  .input-box {
+    width: 303px;
+    padding: 20px;
+  }
+  .filter {
+    width: 200px;
+    font-weight: 400;
+    margin-top: 40px;
+  }
+  .section .container {
+    grid-template-columns: 264px;
+    justify-content: center;
+  }
+}
+@media (max-width: 800px) and (min-width: 375px) {
+  .section .container {
+    max-width: 800px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .input-box {
+    width: 230px;
+  }
+}
+@media (max-width: 415px) and (min-width: 376px) {
+  .nav {
+    padding: 10px 0;
+  }
+  .nav h2,
+  .nav .container .mode p {
+    font-size: 15px;
+  }
+  .nav .container .mode {
+    width: 100px;
+  }
+  .input-box {
+    width: 80%;
+  }
+}
+@media (max-width: 1000px) and (min-width: 410px) {
+  .nav {
+    font-size: 1.8vw;
+  }
+}
+.dark {
+  background: #202c36;
+  color: #fff;
+}
+.dark .select,
+.dark .input-box,
+.dark .country-card,
+.dark .nav,
+.dark .option,
+.dark input {
+  background: #2b3844;
+  color: #fff;
+}
+.filter {
+  user-select: none;
+}
+.option_item,
+.select {
+  cursor: pointer;
+}
